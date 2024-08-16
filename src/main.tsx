@@ -1,10 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import ReactDOM from "react-dom";
+import { createGlobalStyle } from "styled-components";
+import App from "./App";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+const GlobalStyles = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+  }
+`;
+
+ReactDOM.render(
+  <>
+    <GlobalStyles />
     <App />
-  </StrictMode>,
-)
+  </>,
+  document.getElementById("root")
+);
