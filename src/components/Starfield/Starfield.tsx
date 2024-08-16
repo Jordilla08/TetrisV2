@@ -139,8 +139,8 @@ export default function Starfield(props: Props) {
     return () => {
       window.onresize = null;
     };
-  }, [starColor, backgroundColor, speedFactor, starCount]);
-
+  }, []);
+  /* starColor, backgroundColor, speedFactor, starCount */
   return (
     <canvas
       id="starfield"
